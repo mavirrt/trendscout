@@ -1,0 +1,46 @@
+name: Cap nhat TrendScout hang ngay
+
+on:
+  schedule:
+    - cron: "12 11 * * *"   # ~06:12 US Eastern / 21:12 VN
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: trendscout-update
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Thu thap du lieu (Google Trends/News, Wikipedia, bang xep hang, Bluesky, YouTube)
+        run: python collect.py
+        continue-on-error: true
+
+      - name: Dung dashboard (dashboard.html + data/history.json)
+        run: python build.py
+
+      - name: Copy sang index.html cho GitHub Pages
+        run: cp dashboard.html index.html
+
+      - name: Chi giu 14 snapshot gan nhat trong data/raw (tranh phinh repo)
+        run: |
+          cd data/raw
+          ls -1 *.json 2>/dev/null | sort | head -n -14 | xargs -r rm -f
+
+      - name: Commit & push neu co thay doi
+        run: |
+          git config user.name "TrendScout Bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          git diff --cached --quiet || git commit -m "Auto update $(date -u +%Y-%m-%d_%H%M)"
+          git push

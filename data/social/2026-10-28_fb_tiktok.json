@@ -1,0 +1,27 @@
+{
+ "collected_at": "2026-10-28T06:45:00+00:00",
+ "method": "Claude quét qua trình duyệt tích hợp (trang public, không đăng nhập)",
+ "facebook_ads": [
+  {"keyword": "skincare", "active_ads": 50000, "capped": true, "top_advertisers": ["Alibaba.com", "CeraVe Skincare", "Beauty From Bees", "SYD", "HIKOCO", "Walmart", "SHEIN HOME", "OLIVE YOUNG US"]},
+  {"keyword": "supplement", "active_ads": 50000, "capped": true, "top_advertisers": ["American Health Support Community", "Cholesterol Relief Community", "Dose", "Nature Made", "Nature's Bounty"]},
+  {"keyword": "air fryer", "active_ads": 3600, "capped": false, "top_advertisers": ["Best Buy", "Costco Deals with Foster Farms", "Cuisinart", "Land O'Lakes", "The Bliss House Co.", "Fresh Thyme Market"]},
+  {"keyword": "pet products", "active_ads": 18000, "capped": false, "top_advertisers": ["Uproot Clean", "Alibaba.com", "Chewy", "The Dodo with PetLab Co."]},
+  {"keyword": "home decor", "active_ads": 50000, "capped": true, "top_advertisers": ["Alibaba.com", "Pleasantlybuilt", "Scentify", "SHEIN HOME", "Mason Home", "The Home Depot", "Walmart"]},
+  {"keyword": "kitchen gadget", "active_ads": 4100, "capped": false, "top_advertisers": ["Food Storage Tips", "DHgate", "Food Network", "Mason Genie", "Danielle Donohue with Amazon.com"]},
+  {"keyword": "fitness", "active_ads": 50000, "capped": true, "top_advertisers": ["Zumba Fitness", "BODYARMOR", "Rogue Fitness Europe", "DeerRun-Treadmill", "commitbeyond"]},
+  {"keyword": "baby products", "active_ads": 27000, "capped": false, "top_advertisers": ["Alibaba.com", "Coterie Baby", "Graco Children's Products", "WellnessBaby", "Orajel"]},
+  {"keyword": "phone accessories", "active_ads": 5800, "capped": false, "top_advertisers": ["Sonix", "VIN RIDE", "Gadgets", "AliExpress"]},
+  {"keyword": "cleaning products", "active_ads": 25000, "capped": false, "top_advertisers": ["Listerine", "Swiffer", "Healthier Home Products by CHOMP", "Genie Cloth", "Pela Case", "Uproot Clean"]},
+  {"keyword": "hair care", "active_ads": 50000, "capped": true, "top_advertisers": ["Wild Growth Hair Care", "Super Nature Hair", "Humby Organics", "TréLuxe Hair Care", "Victoria's Secret"]},
+  {"keyword": "water bottle", "active_ads": 50000, "capped": true, "top_advertisers": ["Uproot Clean", "SHEIN HOME", "AliExpress", "VOVIA BAGS", "Emmafy", "Mountain Dew"]},
+  {"keyword": "protein", "active_ads": 50000, "capped": true, "top_advertisers": ["Healthy Choice", "Lunchables", "GoMacro", "Gadre Seafood", "Cheerios"]},
+  {"keyword": "matcha", "active_ads": 9500, "capped": false, "top_advertisers": ["Zulay Kitchen", "method products", "Target", "Caila Stevens with Hungryroot"]},
+  {"keyword": "sleep", "active_ads": 50000, "capped": true, "top_advertisers": ["Flo Mattress Review", "Bath & Body Works", "SHEIN", "Essential Sleep Hacks", "DreamCloud Sleep"]}
+ ],
+ "tiktok_hashtags": [
+  {"rank": 1, "hashtag": "tiktokscaryhorrorcontest", "industry": "", "posts": 73500, "views": 312200000},
+  {"rank": 2, "hashtag": "marvelrivalsavengers", "industry": "Games", "posts": 110100, "views": 24100000},
+  {"rank": 3, "hashtag": "livecanbeeasy", "industry": "News & Entertainment", "posts": 21300, "views": 30200000}
+ ],
+ "notes": ["Facebook Ad Library giới hạn hiển thị ~50,000 nên các từ khoá chạm trần được đánh dấu capped."]
+}

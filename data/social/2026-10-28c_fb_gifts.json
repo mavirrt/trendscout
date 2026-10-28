@@ -1,0 +1,27 @@
+{
+ "collected_at": "2026-10-28T08:10:00+00:00",
+ "method": "Claude quét Meta Ad Library qua trình duyệt tích hợp (quà tặng, mùa lễ, nhóm sản phẩm gợi ý)",
+ "facebook_ads": [
+  {"keyword": "gift for him", "active_ads": 50000, "capped": true},
+  {"keyword": "gift for her", "active_ads": 50000, "capped": true},
+  {"keyword": "advent calendar", "active_ads": 27000, "capped": false},
+  {"keyword": "personalized ornament", "active_ads": 17000, "capped": false},
+  {"keyword": "blind box", "active_ads": 16000, "capped": false},
+  {"keyword": "black friday deal", "active_ads": 15000, "capped": false},
+  {"keyword": "bag charm", "active_ads": 11000, "capped": false},
+  {"keyword": "leopard print", "active_ads": 7000, "capped": false},
+  {"keyword": "stocking stuffer", "active_ads": 5000, "capped": false},
+  {"keyword": "christmas pajamas", "active_ads": 4300, "capped": false},
+  {"keyword": "thanksgiving shirt", "active_ads": 3200, "capped": false},
+  {"keyword": "western boots", "active_ads": 2900, "capped": false},
+  {"keyword": "ugly christmas sweater", "active_ads": 1300, "capped": false},
+  {"keyword": "friendsgiving", "active_ads": 1300, "capped": false},
+  {"keyword": "squishy toy", "active_ads": 1200, "capped": false}
+ ],
+ "tiktok_hashtags": [],
+ "notes": [
+  "Quà tặng chung (gift for him/her) đã chạm trần 50K: thị trường quà Giáng sinh đã rất đông.",
+  "Advent calendar (27K), personalized ornament (17K) và blind box (16K) đang được đẩy mạnh: hợp với hướng đồ chơi nhỏ và phụ kiện.",
+  "Ugly christmas sweater (1.3K), squishy toy (1.2K), Friendsgiving (1.3K) còn ít quảng cáo: ngách ít cạnh tranh trên Facebook."
+ ]
+}

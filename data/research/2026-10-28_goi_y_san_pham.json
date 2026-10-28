@@ -1,0 +1,177 @@
+{
+ "date": "2026-10-28",
+ "by": "Claude research (web) + tín hiệu từ TrendScout",
+ "note": "Link sản phẩm lấy từ các bài báo/retailer tại thời điểm research; giá có thể đã đổi. Sản phẩm dùng tên/hình nhân vật, nghệ sĩ, thương hiệu cần license — RnD nên làm thiết kế 'lấy cảm hứng' (họa tiết, màu, phong cách) thay vì in logo/hình gốc.",
+ "ideas": [
+  {
+   "title": "Áo họa tiết da báo / ngựa vằn đỏ-đen (phong cách Nikki – phim Obsession)",
+   "category": "Thời trang", "timing": "Bán ngay (Halloween + mùa tiệc cuối năm)", "ip_risk": "Thấp nếu chỉ là họa tiết, không dùng tên/hình phim",
+   "trend": "Obsession (5/2026) thu hơn 500 triệu USD; trang phục Nikki đứng #3 Google trending costumes 2026, có skin Fortnite từ 21/10. Áo halter ngựa vằn đỏ Princess Polly hết hàng liên tục, presale 27K người chờ, resale >100 USD. Trên TrendScout: 'Obsession' nằm trong top iTunes phim.",
+   "suggest": "Halter top / mesh top họa tiết animal print đỏ-đen, quần short da giả, set phối sẵn 'costume-ready' bán kèm. Mở rộng sang váy party cho mùa lễ.",
+   "evidence": [
+    {"label": "Variety – Google top trending costumes 2026", "url": "https://variety.com/2026/shopping/news/google-top-trending-halloween-costumes-2026-shop-online-1236910312/"},
+    {"label": "YPulse – Gen Z micro-trends (Nikki top, 27K waitlist)", "url": "https://www.ypulse.com/newsfeed/2026/10/01/gen-zs-fashion-micro-trends-are-losing-the-plot/"},
+    {"label": "Shacknews – Nikki skin Fortnite", "url": "https://www.shacknews.com/article/151066/obsession-nikki-fortnite-skin"}
+   ],
+   "products": [
+    {"name": "Princess Polly Cielo Mesh Halter Top (Red Zebra) – mẫu gốc", "retailer": "Princess Polly", "price": "", "url": "https://us.princesspolly.com/products/cielo-mesh-halter-top-red-zebra"},
+    {"name": "WDIRARA Red Leopard Print Halter Top", "retailer": "Amazon", "price": "~$17", "url": "https://www.amazon.com/WDIRARA-Womens-Leopard-Ruched-Sleeveless/dp/B0DFY3RS6B/"},
+    {"name": "Hibshaby Black Faux Leather Shorts", "retailer": "Amazon", "price": "~$29", "url": "https://www.amazon.com/dp/B0C7498HDX"},
+    {"name": "Athlefit Black Knee High Boots", "retailer": "Amazon", "price": "~$43", "url": "https://www.amazon.com/Athlefit-Chunky-Square-Fashion-Booties/dp/B0F7Q483Q7/"}
+   ],
+   "search": ["red zebra print halter top", "red leopard print mesh top"]
+  },
+  {
+   "title": "Bộ phụ kiện hoá trang 'last-minute' ghép từ đồ thường (tóc giả, kính, áo khoác lông)",
+   "category": "Thời trang & phụ kiện", "timing": "Bán ngay – còn 3 ngày tới Halloween, chỉ hợp hàng có sẵn kho Mỹ", "ip_risk": "Thấp",
+   "trend": "Xu hướng 2026 là hoá trang 'ghép đồ' dưới 60 USD theo nhân vật phim/TV: Miranda Priestly (Devil Wears Prada), Nikki (Obsession), cặp đôi The Traitors, Scooby-Doo gang. Top tìm kiếm: Spider-Man, Harley Quinn, Batman, Wednesday, Minions, Mario, Five Nights at Freddy's, Minecraft.",
+   "suggest": "Combo tóc giả + kính + phụ kiện theo 'vibe' nhân vật (không dùng tên), bán dạng kit; sau Halloween chuyển sang phụ kiện tiệc New Year.",
+   "evidence": [
+    {"label": "Yahoo Shopping – viral costume ideas ≤ $60", "url": "https://shopping.yahoo.com/general/article/the-best-halloween-costume-trends-for-2026-and-everything-you-need-to-pull-them-off-155356471.html"},
+    {"label": "Forbes – most popular costumes 2026 (search volume)", "url": "https://www.forbes.com/sites/paultassi/2026/10/27/the-most-popular-halloween-costume-of-2026-is-way-above-second-place/"}
+   ],
+   "products": [
+    {"name": "LeMarnia Short Curly Grey Wig", "retailer": "Amazon", "price": "~$22", "url": "https://www.amazon.com/dp/B0D2GWFT54"},
+    {"name": "SUNIER Oversized Polarized Sunglasses", "retailer": "Amazon", "price": "~$13", "url": "https://www.amazon.com/SUNIER-Polarized-Sunglasses-Protection-Transparent/dp/B07MGNKXGF"},
+    {"name": "Toponsky Black Faux Fur Coat", "retailer": "Amazon", "price": "~$28", "url": "https://www.amazon.com/Furry-Winter-Jackets-Women-Fashion/dp/B09KMLVVPX"},
+    {"name": "Kids Hazel Costume – Descendants (Spirit Halloween)", "retailer": "Spirit Halloween", "price": "", "url": "https://www.spirithalloween.com/product/kids-hazel-costume-descendants-wicked-wonderland/299741.uts"},
+    {"name": "Agamemnon (The Odyssey) costume", "retailer": "Amazon", "price": "~$67", "url": "https://www.amazon.com/dp/B0HCYXT772"}
+   ],
+   "search": ["last minute halloween costume kit adult", "costume wig sunglasses set"]
+  },
+  {
+   "title": "Đồ chơi squishy / sensory kiểu NeeDoh",
+   "category": "Đồ chơi nhỏ", "timing": "Bán quanh năm; đỉnh dịp Christmas (stocking stuffer)", "ip_risk": "Trung bình – 'NeeDoh' là thương hiệu của Schylling, không dùng tên/hình dáng y hệt",
+   "trend": "NeeDoh là costume trending #2 trên Google 2026; cơn sốt squishy làm cháy hàng nhiều cửa hàng ở Mỹ (6/2026), thành đồ sưu tầm.",
+   "suggest": "Squishy cảm giác thương hiệu riêng: hình khối, đồ ăn, nhân vật mascot riêng; phiên bản móc khoá mini; set quà Giáng sinh.",
+   "evidence": [
+    {"label": "KBTX – squishy craze selling out stores across America", "url": "https://www.kbtx.com/2026/06/18/squishy-toy-craze-is-selling-out-stores-across-america/"},
+    {"label": "Hola – NeeDoh collectible phenomenon", "url": "https://www.hola.com/us/lifestyle/20260819918995/needoh-viral-squishy-craze-problem/"}
+   ],
+   "products": [
+    {"name": "NeeDoh Nice Cube (sensory)", "retailer": "Walmart", "price": "", "url": "https://www.walmart.com/ip/Nee-doh-Nice-Cube-Satisfying-Square-Shaped-Sensory-1-piece-random-color/20075151688"},
+    {"name": "Super NeeDoh box costume (handmade)", "retailer": "Etsy", "price": "~$110", "url": "https://www.etsy.com/listing/4576284987/super-needoh-box-costume-handmade-with"},
+    {"name": "Gui Gui Mega Slime Haul", "retailer": "Target", "price": "$29.99", "url": "https://www.target.com/p/gui-gui-mega-slime-haul/-/A-94991898"}
+   ],
+   "search": ["sensory squishy cube toy", "squishy stress ball stocking stuffer"]
+  },
+  {
+   "title": "Blind box & bag charm plush (xu hướng sau Labubu)",
+   "category": "Đồ chơi & phụ kiện", "timing": "Chuẩn bị cho Black Friday → Christmas", "ip_risk": "Thấp nếu mascot tự thiết kế",
+   "trend": "Plush blind box đang thay thế figure nhựa vinyl năm 2026; 'Magic Jellykins Surprise Plush Blind Box' nằm trong danh sách đồ chơi hot nhất 2026; bag charm (móc treo túi) là định dạng bán chạy.",
+   "suggest": "Dòng mascot riêng dạng blind box plush móc khoá, ra series theo mùa (Giáng sinh, Tết), kèm hiệu ứng 'secret/rare' để kích mua lặp lại.",
+   "evidence": [
+    {"label": "Billboard – blind boxes sau Labubu", "url": "https://www.billboard.com/culture/product-recommendations/best-blind-boxes-2026-shop-online-1236178100/"},
+    {"label": "POPBOXSS – plush blind box thay vinyl 2026", "url": "https://popboxss.com/blogs/why-are-plush-blind-boxes-the-2026-trend-replacing-vinyl-figures"},
+    {"label": "TODAY – hottest holiday toys 2026", "url": "https://www.today.com/shop/hottest-toys-2026-rcna602966"}
+   ],
+   "products": [
+    {"name": "Magic Jellykins Surprise Plush Blind Box", "retailer": "Amazon", "price": "$9.99", "url": "https://www.amazon.com/dp/B0GHCCR78X"},
+    {"name": "Hello Kitty and Friends Blue Flutter Blind Box Plush Bag Charm", "retailer": "Hot Topic", "price": "~$21", "url": "https://www.hottopic.com/product/hello-kitty-and-friends-blue-flutter-blind-box-plush-bag-charm/35108162.html"},
+    {"name": "POP MART Hirono Echo Series", "retailer": "Amazon", "price": "$19.99", "url": "https://www.amazon.com/dp/B0DXK6RWDZ"},
+    {"name": "Tayto Treats Bag Charm Blind Box", "retailer": "Smoko", "price": "$16", "url": "https://www.smokonow.com/products/tayto-treats-bag-charm-blind-box"}
+   ],
+   "search": ["plush blind box keychain", "bag charm plush blind box"]
+  },
+  {
+   "title": "Đồ chơi quà Giáng sinh: thú ảo tương tác, trứng nở, slime",
+   "category": "Đồ chơi", "timing": "Chuẩn bị ngay cho Black Friday (còn ~30 ngày)", "ip_risk": "Thấp với dòng không thương hiệu",
+   "trend": "Danh sách đồ chơi hot 2026 (Amazon, Target, Walmart): thú cưng tương tác, Tamagotchi, trứng khủng long/cá mập nở, slime kit, nostalgia + đồ chơi không màn hình.",
+   "suggest": "Đồ chơi 'screen-free' giá 15–40 USD: thú ảo mini, trứng nở, kit slime; đóng gói quà sẵn.",
+   "evidence": [
+    {"label": "TODAY – hottest toys 2026", "url": "https://www.today.com/shop/hottest-toys-2026-rcna602966"},
+    {"label": "Forbes – Amazon top toys 2026", "url": "https://www.forbes.com/sites/forbes-personal-shopper/2026/09/11/best-toys-on-amazon-2026/"}
+   ],
+   "products": [
+    {"name": "Peekimo Pink Interactive Pet", "retailer": "Amazon", "price": "$24.99", "url": "https://www.amazon.com/dp/B0GHCNDJKM"},
+    {"name": "Tamagotchi Paradise", "retailer": "Walmart", "price": "$44.99", "url": "https://www.walmart.com/ip/Tamagotchi-Paradise-New/20158552844"},
+    {"name": "Primal Hatch Megalodon Hatching Shark Egg", "retailer": "Amazon", "price": "$49.99", "url": "https://www.amazon.com/dp/B0GHBKG64Q"},
+    {"name": "Rainbow Loom Spin Studio", "retailer": "Amazon", "price": "$34.99", "url": "https://www.amazon.com/dp/B0GS3GKD2M"}
+   ],
+   "search": ["interactive pet toy", "hatching egg toy", "slime kit gift"]
+  },
+  {
+   "title": "Thời trang country / western (nhạc country đang dẫn đầu Billboard)",
+   "category": "Thời trang", "timing": "Bán ngay → Christmas", "ip_risk": "Thấp nếu không dùng tên/lời bài hát nghệ sĩ",
+   "trend": "Trên TrendScout: Ella Langley 'Choosin' Texas' #1 Billboard Hot 100 và #2 Apple Music, Zach Bryan top 4. Bài hát giữ #1 kỷ lục 15 tuần; Ella Langley hợp tác American Eagle; đôi boots trong MV bán đại trà.",
+   "suggest": "Áo thun graphic phong cách rodeo/Texas, boots cao bồi màu đỏ-kem, denim, mũ cowboy, phụ kiện belt buckle.",
+   "evidence": [
+    {"label": "Holler – Ella Langley x American Eagle", "url": "https://holler.country/news/breaking/ella-langley-drops-new-american-eagle-collection/"},
+    {"label": "All Country News – boots trong MV Choosin' Texas", "url": "https://www.allcountrynews.com/post/step-into-ella-langley-s-spotlight-you-can-now-own-her-choosin-texas-boots"}
+   ],
+   "products": [
+    {"name": "Tecovas The Jolene (Crimson/Bone) – boots trong MV", "retailer": "Tecovas", "price": "", "url": "https://www.tecovas.com/products/the-jolene?color=crimson-bone-cowhide"}
+   ],
+   "search": ["western graphic tee women", "red cowgirl boots women", "rodeo oversized t-shirt"]
+  },
+  {
+   "title": "Xu hướng thời trang thu trên TikTok: mũ Kangol/bucket, áo khoác Napoleon, túi belt cargo, giày đế xuồng, cardigan len to",
+   "category": "Thời trang", "timing": "Bán ngay (mùa thu–đông)", "ip_risk": "Thấp",
+   "trend": "WhoWhatWear tổng hợp 7 xu hướng TikTok 2026; danh sách TikTok Shop tháng 10 có chunky knit cardigan, ankle boots, khăn len oversized.",
+   "suggest": "Mũ flat cap/bucket lông, belt bag nhiều túi, cardigan len to sợi, áo khoác quân đội cổ đứng.",
+   "evidence": [
+    {"label": "WhoWhatWear – TikTok fashion trends 2026", "url": "https://www.whowhatwear.com/fashion/trends/tiktok-fashion-trends-2026"},
+    {"label": "ASTools – Top TikTok Shop products 10/2026", "url": "https://news.astools.app/en/blog/top-tiktok-shop-products-october-2026"}
+   ],
+   "products": [
+    {"name": "Kangol Classic 504 Flat Cap", "retailer": "Urban Outfitters", "price": "~£62", "url": "https://www.urbanoutfitters.com/en-gb/shop/hybrid/kangol-black-classic-504-flat-cap"},
+    {"name": "Free People Crew Cargo Pocket Belt", "retailer": "Free People", "price": "~£108", "url": "https://www.freepeople.com/uk/shop/crew-cargo-pocket-belt/"},
+    {"name": "H&M wedge-heeled mules", "retailer": "H&M", "price": "~£45", "url": "https://www2.hm.com/en_gb/productpage.1296767001.html"},
+    {"name": "Mango wool military jacket", "retailer": "Mango", "price": "~£109", "url": "https://shop.mango.com/gb/en/p/women/jackets/bombers/wool-military-jacket_17099120"}
+   ],
+   "search": ["cargo pocket belt bag", "faux fur bucket hat", "chunky knit cardigan women"]
+  },
+  {
+   "title": "Đồ trang trí mùa lễ & cozy home (đèn LED, nến không lửa, chăn sưởi USB)",
+   "category": "Nhà cửa & trang trí", "timing": "Halloween → Thanksgiving → Christmas", "ip_risk": "Thấp",
+   "trend": "Top TikTok Shop tháng 10/2026: dây đèn LED Halloween, mặt nạ LED, ốp điện thoại Halloween, nến LED, chăn sưởi USB, máy khuếch tán tinh dầu. Giá nhập ~2–22 USD, bán lẻ 10–60 USD.",
+   "suggest": "Giữ nguyên dòng đèn/nến nhưng đổi theme sang Thanksgiving & Christmas từ 1/11; bundle 'cozy night' (chăn + nến + đèn).",
+   "evidence": [{"label": "ASTools – Top TikTok Shop products 10/2026", "url": "https://news.astools.app/en/blog/top-tiktok-shop-products-october-2026"}],
+   "products": [],
+   "search": ["flameless led candles set", "usb heated throw blanket", "christmas led string lights"]
+  },
+  {
+   "title": "Merch BookTok romantasy (dòng A Court of Thorns and Roses)",
+   "category": "Phụ kiện & quà tặng", "timing": "Quà Christmas", "ip_risk": "Trung bình–cao: tên sách/thuật ngữ trong truyện có thể là thương hiệu; Target đã ra hàng license",
+   "trend": "Trên TrendScout: 'A Court of Splintered Harmony' #1 Apple Books, 'A Court of Thorns and Roses' #17; Target ra sweatshirt ACOTAR; nến/bookmark 'bookish' bán mạnh trên Etsy.",
+   "suggest": "Bookmark từ tính, nến thơm 'fantasy reader', áo nỉ 'bookish' với câu chữ chung chung (không dùng tên truyện), đèn đọc sách kẹp.",
+   "evidence": [
+    {"label": "AOL – Target ACOTAR sweatshirts", "url": "https://www.aol.com/articles/target-launches-cozy-acotar-sweatshirts-212500777.html"},
+    {"label": "Book Riot – bookish candles", "url": "https://bookriot.com/best-bookish-candles-for-fantasy-lovers/"}
+   ],
+   "products": [
+    {"name": "ACOTAR magnetic bookmarks (Conquest Journals)", "retailer": "Root & Co", "price": "", "url": "https://www.rootandco.com/products/conquest-journals-a-court-of-thorns-and-roses-magnetic-bookmarks"},
+    {"name": "Bookmark Set – A Court of Thorns and Roses", "retailer": "Indigo", "price": "", "url": "https://www.indigo.ca/products/bookmark-set-a-court-of-thorns-and-roses"},
+    {"name": "Etsy listing (bookish merch)", "retailer": "Etsy", "price": "", "url": "https://www.etsy.com/listing/1812489387"}
+   ],
+   "search": ["bookish candle gift", "magnetic bookmark set fantasy", "bookish sweatshirt"]
+  },
+  {
+   "title": "Ốp & phụ kiện cho iPhone Duo (điện thoại gập mới) + ốp theo mùa",
+   "category": "Phụ kiện điện thoại", "timing": "Đi trước đối thủ – mẫu máy mới", "ip_risk": "Thấp (không dùng logo Apple)",
+   "trend": "Trên TrendScout: cụm 'iPhone Duo cases' nổi nhất trong ngách phone accessories; Halloween phone cases nằm trong top TikTok Shop tháng 10.",
+   "suggest": "Ốp bản lề cho máy gập, ốp kèm dây đeo/charm, bộ ốp theo mùa (Christmas) bán kèm bag charm.",
+   "evidence": [{"label": "ASTools – Top TikTok Shop products 10/2026", "url": "https://news.astools.app/en/blog/top-tiktok-shop-products-october-2026"}],
+   "products": [],
+   "search": ["iPhone Duo case", "phone case with charm strap", "christmas phone case"]
+  },
+  {
+   "title": "Phụ kiện gaming mùa ra game lớn (Call of Duty MW4)",
+   "category": "Phụ kiện", "timing": "Ra mắt game + quà Christmas", "ip_risk": "Cao nếu dùng logo/tên game – chỉ làm style quân sự/tactical chung",
+   "trend": "Trên TrendScout: Call of Duty: Modern Warfare 4 đứng #1 lĩnh vực Game (Wikipedia + tin tức), Call of Duty #5 người chơi Steam.",
+   "suggest": "Grip tay cầm, skin tay cầm họa tiết camo, giá treo tai nghe, mousepad lớn, đèn LED bàn game.",
+   "evidence": [],
+   "products": [],
+   "search": ["camo controller skin", "controller thumb grips", "headset stand rgb"]
+  },
+  {
+   "title": "Phụ kiện fan K-pop / K-drama",
+   "category": "Phụ kiện", "timing": "Quanh năm", "ip_risk": "Cao nếu in hình idol – làm phụ kiện chung (holder, toploader)",
+   "trend": "Trên TrendScout (Soompi): PLAVE, ILLIT, NCT WISH, A2O LITE lên bảng Circle; K-drama 'Love In Disguise', 'Between Steps' đạt rating cao nhất.",
+   "suggest": "Photocard holder móc khoá, toploader trang trí, túi đựng lightstick, sticker deco.",
+   "evidence": [],
+   "products": [],
+   "search": ["photocard holder keychain", "kpop toploader deco", "lightstick case"]
+  }
+ ]
+}

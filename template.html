@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TrendScout Mỹ</title>
+<style>
+:root{color-scheme:light;--bg:#f6f5f1;--card:#ffffff;--ink:#1b1b1a;--muted:#6b6a65;--line:#e4e2db;--accent:#d8432b;--accent-soft:#fbe5df;--pos:#1f7a4d;--bar:#2f5d8a;--bar-soft:#dbe6f1;--chip:#efede7}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 "Segoe UI",system-ui,-apple-system,sans-serif}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:24px 16px 60px}
+header{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:12px;margin-bottom:18px}
+h1{font-size:26px;margin:0;letter-spacing:-.02em}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);font-size:13px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{background:var(--chip);border-radius:99px;padding:3px 10px;font-size:12px;color:var(--muted)}
+.chip.ok::before{content:"● ";color:var(--pos)} .chip.off::before{content:"● ";color:var(--accent)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;margin-bottom:18px}
+.kpi{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+.kpi .l{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.kpi .v{font-size:20px;font-weight:650;margin-top:4px;overflow-wrap:anywhere}
+.kpi .n{font-size:12px;color:var(--muted)}
+nav{display:flex;gap:4px;flex-wrap:wrap;border-bottom:1px solid var(--line);margin-bottom:16px}
+nav button{background:none;border:0;padding:10px 12px;font:inherit;color:var(--muted);cursor:pointer;border-bottom:2px solid transparent}
+nav button.on{color:var(--ink);border-color:var(--accent);font-weight:600}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:860px){.grid2{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;min-width:0}
+.card h2{font-size:15px;margin:0 0 4px} .card .hint{color:var(--muted);font-size:12px;margin:0 0 12px}
+.bars .row{display:grid;grid-template-columns:minmax(110px,190px) 1fr 44px;gap:8px;align-items:center;padding:3px 0}
+.bars .lab{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bars .trk{background:var(--bar-soft);border-radius:4px;height:14px;overflow:hidden}
+.bars .fill{background:var(--bar);height:100%;border-radius:4px}
+.bars .num{text-align:right;font-variant-numeric:tabular-nums;color:var(--muted);font-size:12px}
+.new{background:var(--accent-soft);color:var(--accent);font-size:10px;font-weight:700;border-radius:4px;padding:0 5px;margin-left:4px}
+.up{color:var(--pos);font-size:11px;margin-left:4px}
+table{width:100%;border-collapse:collapse}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:600}
+td.num{font-variant-numeric:tabular-nums;white-space:nowrap}
+.tbl{overflow-x:auto}
+.mom{display:inline-block;min-width:44px;text-align:center;border-radius:6px;padding:1px 6px;font-weight:650;font-variant-numeric:tabular-nums}
+.tag{display:inline-block;background:var(--chip);border-radius:4px;padding:0 6px;margin:1px 2px 1px 0;font-size:12px}
+.hl{display:block;font-size:12px;color:var(--muted);text-decoration:none;margin-top:3px}
+.hl:hover{color:var(--ink);text-decoration:underline}
+.list{list-style:none;margin:0;padding:0}
+.list li{padding:10px 0;border-bottom:1px solid var(--line)}
+.list li:last-child{border:0}
+.meta{color:var(--muted);font-size:12px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+select,input{font:inherit;background:var(--card);color:var(--ink);border:1px solid var(--line);border-radius:8px;padding:7px 10px}
+input{flex:1;min-width:180px}
+.note{background:var(--accent-soft);border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+.hide{display:none}
+.topic{border-bottom:1px solid var(--line);padding:10px 0}
+.topic summary{cursor:pointer;display:flex;justify-content:space-between;gap:8px}
+.topic summary b{font-weight:600}
+.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px;margin-bottom:16px}
+.dcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:14px 16px;cursor:pointer;transition:border-color .15s}
+.dcard:hover{border-color:var(--accent)}
+.dcard h3{margin:0 0 8px;font-size:15px;display:flex;justify-content:space-between;gap:8px}
+.dcard h3 span{color:var(--muted);font-weight:400;font-size:12px}
+.dcard ol{margin:0;padding-left:20px}
+.dcard li{padding:2px 0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.dchips{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:14px}
+.dchips button{font:inherit;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:99px;padding:6px 12px;cursor:pointer}
+.dchips button.on{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.sig{display:inline-block;font-size:11px;border-radius:4px;padding:0 6px;margin:1px 3px 1px 0;background:var(--chip);white-space:nowrap}
+.sig.w{background:var(--bar-soft)} .sig.c{background:#efe6d2;color:#6b4e12} .sig.n{background:#dff0e5;color:#1f5c3a}
+.scorebar{height:6px;border-radius:3px;background:var(--bar-soft);overflow:hidden;margin-top:4px;max-width:120px}
+.scorebar i{display:block;height:100%;background:var(--accent)}
+.cgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-top:16px}
+.mini{list-style:none;margin:0;padding:0;counter-reset:r}
+.mini li{padding:5px 0;border-bottom:1px solid var(--line);display:flex;gap:8px}
+.mini li:last-child{border:0}
+.mini .rk{color:var(--muted);min-width:22px;text-align:right;font-variant-numeric:tabular-nums}
+.dtag{font-size:11px;color:var(--muted)}
+.sig.s{background:#e9e1f5;color:#4b2d7a}
+.warn{background:#fff4d6;color:#5c4400;border-radius:10px;padding:10px 14px;font-size:13px;margin-bottom:14px}
+.idea{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.idea h3{margin:0 0 6px;font-size:16px}
+.idea .row2{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:10px}
+@media(max-width:760px){.idea .row2{grid-template-columns:1fr}}
+.idea ul{margin:4px 0 0;padding-left:18px}
+.idea li{margin:3px 0}
+.pill{display:inline-block;border-radius:99px;padding:1px 9px;font-size:12px;margin-right:4px;background:var(--chip)}
+.pill.t{background:var(--accent-soft);color:var(--accent)}
+.slinks a{font-size:12px;margin-right:8px}
+.hcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;margin-bottom:14px}
+.hcard h3{margin:0;font-size:17px}
+.post{padding:8px 0;border-bottom:1px solid var(--line);font-size:13px}
+.post:last-child{border:0}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div><h1>TrendScout <span>Mỹ</span></h1><div class="sub" id="when"></div></div>
+  <div class="chips" id="status"></div>
+</header>
+<div class="kpis" id="kpis"></div>
+<nav id="tabs">
+  <button data-t="overview" class="on">Tổng quan</button>
+  <button data-t="domains">Theo lĩnh vực</button>
+  <button data-t="ideas">💡 Gợi ý sản phẩm</button>
+  <button data-t="niches">Sản phẩm &amp; ngách</button>
+  <button data-t="history">📈 Lịch sử</button>
+  <button data-t="topics">Chủ đề người tiêu dùng</button>
+  <button data-t="social">Mạng xã hội</button>
+  <button data-t="feed">Tất cả tín hiệu</button>
+</nav>
+
+<section id="overview">
+  <div class="dgrid" id="domCards"></div>
+  <div class="grid2">
+    <div class="card"><h2>Cụm từ xuất hiện nhiều nhất</h2><p class="hint">Số tin/bài trong 7 ngày nhắc đến cụm từ (Google News). <span class="new">MỚI</span> = chưa có ở lần quét trước.</p><div class="bars" id="terms"></div></div>
+    <div class="card"><h2>Google Trends — đang được tìm nhiều ở Mỹ</h2><p class="hint">Lượt tìm ước tính hôm nay, kèm tin liên quan.</p><ul class="list" id="gtrends"></ul></div>
+  </div>
+  <div class="card" style="margin-top:16px"><h2>Phân bố theo nhóm ngành</h2><p class="hint">Số tín hiệu được gắn vào từng nhóm.</p><div class="bars" id="cats"></div></div>
+</section>
+
+<section id="domains" class="hide">
+  <div class="dchips" id="dchips"></div>
+  <div class="card">
+    <h2 id="dTitle"></h2>
+    <p class="hint">Điểm trend (0–100) gộp 3 tín hiệu: <span class="sig w">📖 Wikipedia</span> lượt xem hôm qua (▲ so với 1 tuần trước, MỚI = tuần trước chưa vào top), <span class="sig c">📊 BXH</span> thứ hạng trên bảng xếp hạng, <span class="sig n">📰 Tin</span> số bài báo 3 ngày qua nhắc tới. Càng nhiều tín hiệu cùng lúc càng chắc là trend thật.</p>
+    <div class="tbl"><table><thead><tr><th>#</th><th>Trend</th><th>Điểm</th><th>Tín hiệu</th><th>Tin liên quan</th></tr></thead><tbody id="dBody"></tbody></table></div>
+  </div>
+  <div class="cgrid" id="dCharts"></div>
+</section>
+
+<section id="ideas" class="hide">
+  <div class="warn">⚠️ Sản phẩm in tên, hình nhân vật, nghệ sĩ hay logo cần có license. RnD nên làm thiết kế <b>lấy cảm hứng</b> (họa tiết, màu, phong cách) thay vì sao chép. Link bên dưới dùng để tham khảo mẫu, giá và đối thủ.</div>
+  <div class="card" style="margin-bottom:16px"><h2 id="resTitle">Gợi ý đã research</h2><p class="hint" id="resNote"></p><div class="filters"><select id="resCat"><option value="">Mọi nhóm sản phẩm</option></select></div></div>
+  <div id="resList"></div>
+  <div class="card"><h2>Gợi ý tự động từ trend hôm nay</h2><p class="hint">Tạo tự động từ các trend có ít nhất 2 tín hiệu. Bấm link để xem sản phẩm đang bán trên từng sàn (Amazon, Etsy, Walmart để xem đối thủ, AliExpress để tìm nguồn hàng).</p>
+    <div class="tbl"><table><thead><tr><th>Trend</th><th>Hướng sản phẩm</th><th>Lý do</th><th>Xem sản phẩm có sẵn</th></tr></thead><tbody id="autoBody"></tbody></table></div></div>
+</section>
+
+<section id="niches" class="hide">
+  <div class="card">
+    <h2>Độ nóng của các ngách</h2>
+    <p class="hint">Đà tăng = tỉ lệ tin trong 48h gần nhất so với mức đều trong 7 ngày (100 = bình thường, &gt;130 = đang nóng lên). Quảng cáo FB = số quảng cáo đang chạy ở Mỹ chứa từ khoá (Meta Ad Library). Sửa danh sách ngách trong config.json.</p>
+    <div class="tbl"><table><thead><tr><th>Ngách</th><th>Đà tăng</th><th>Tin 7 ngày</th><th>Quảng cáo FB</th><th>Cụm từ đi kèm &amp; tin mới</th></tr></thead><tbody id="nicheBody"></tbody></table></div>
+  </div>
+</section>
+
+<section id="history" class="hide">
+  <div class="card">
+    <h2>📈 Xu hướng theo thời gian</h2>
+    <p class="hint">Đà tăng của từng ngách và số lượt nhắc tới từng ngày lễ qua mỗi lần quét. Dữ liệu tự tích luỹ theo ngày (tối đa ~5 tuần gần nhất) — chạy tool đều đặn để đường càng dài càng rõ xu hướng.</p>
+    <select id="histSel" style="margin-bottom:12px"></select>
+    <div id="histChart"></div>
+  </div>
+</section>
+
+<section id="topics" class="hide">
+  <div class="card"><h2>Người Mỹ đang bàn gì về mua sắm & tiêu dùng</h2><p class="hint">Gom từ các truy vấn "TikTok viral", "Gen Z shopping"… Bấm vào để xem tin gốc.</p><div id="buzz"></div></div>
+</section>
+
+<section id="social" class="hide">
+  <div class="note" id="socialNote"></div>
+  <div class="grid2" style="margin-bottom:16px">
+    <div class="card"><h2>💬 Bluesky — chủ đề đang hot</h2><p class="hint">Danh sách trending của Bluesky (mạng xã hội kiểu X/Twitter, đa số người dùng ở Mỹ).</p><ul class="list" id="bskyTrend"></ul></div>
+    <div class="card"><h2>🔥 Bài viết & video được tương tác nhiều nhất</h2><p class="hint">Bluesky (like + chia sẻ + bình luận) và YouTube (lượt xem, video đăng trong tuần), gom theo lĩnh vực.</p>
+      <div class="filters"><select id="socDom"><option value="">Mọi lĩnh vực</option></select><select id="socSrc"><option value="">Bluesky + YouTube</option><option value="bluesky">Bluesky</option><option value="youtube">YouTube</option></select></div>
+      <div id="socList"></div></div>
+  </div>
+  <div class="grid2">
+    <div class="card"><h2>TikTok — hashtag thịnh hành (Mỹ, 7 ngày)</h2><p class="hint">TikTok Creative Center. Chọn ngành để xem top hashtag của ngành đó.</p><select id="ttInd" style="margin-bottom:8px"></select><div class="tbl" style="max-height:560px;overflow:auto"><table><thead><tr><th>#</th><th>Hashtag</th><th>Bài đăng</th><th>Lượt xem</th></tr></thead><tbody id="ttBody"></tbody></table></div></div>
+    <div class="card"><h2>Facebook — nhà quảng cáo lớn theo ngách</h2><p class="hint">Số quảng cáo đang chạy tại Mỹ theo từ khoá và top nhà quảng cáo (Meta Ad Library). Nhiều quảng cáo = nhiều người bán đang đẩy hàng.</p><div class="bars" id="fbBars"></div><div id="fbAdv" style="margin-top:12px"></div></div>
+  </div>
+</section>
+
+<section id="feed" class="hide">
+  <div class="card">
+    <div class="filters">
+      <input id="q" placeholder="Tìm trong tiêu đề…">
+      <select id="fSrc"><option value="">Mọi nguồn</option><option value="google_news">Google News</option></select>
+      <select id="fPlat"><option value="">Mọi nền tảng được nhắc</option><option>tiktok</option><option>facebook</option><option>instagram</option><option>amazon</option></select>
+      <select id="fCat"><option value="">Mọi nhóm ngành</option></select>
+    </div>
+    <div class="meta" id="feedCount"></div>
+    <ul class="list" id="feedList"></ul>
+  </div>
+</section>
+</div>
+<script>
+const D=(()=>{const b=atob(/*__DATA__*/"");const u=new Uint8Array(b.length);for(let i=0;i<b.length;i++)u[i]=b.charCodeAt(i)^(i*7+13)%256;return JSON.parse(new TextDecoder().decode(u))})();
+// chống copy (chỉ ngăn thao tác thông thường)
+(()=>{const stop=e=>{e.preventDefault();return false};
+['contextmenu','copy','cut','dragstart','selectstart'].forEach(t=>document.addEventListener(t,e=>{if(t==='selectstart'&&e.target.closest&&e.target.closest('input,textarea,select'))return;stop(e)}));
+document.addEventListener('keydown',e=>{const k=(e.key||'').toLowerCase();if(e.key==='F12'||((e.ctrlKey||e.metaKey)&&['c','x','s','u','p','a'].includes(k)&&!(k==='a'&&e.target.closest&&e.target.closest('input,textarea')))||((e.ctrlKey||e.metaKey)&&e.shiftKey&&['i','j','c'].includes(k)))stop(e)});
+const css=document.createElement('style');css.textContent='body{-webkit-user-select:none;user-select:none}input,textarea{-webkit-user-select:text;user-select:text}@media print{body{display:none!important}}';document.head.appendChild(css);})();
+const $=s=>document.querySelector(s);
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const fmt=n=>n==null?"–":n>=1e9?(n/1e9).toFixed(1)+"B":n>=1e6?(n/1e6).toFixed(1)+"M":n>=1e3?(n/1e3).toFixed(n>=1e4?0:1)+"K":String(n);
+const dt=s=>s?new Date(s).toLocaleString("vi-VN",{day:"2-digit",month:"2-digit",hour:"2-digit",minute:"2-digit"}):"";
+const ago=s=>{if(!s)return"";const h=(Date.now()-new Date(s))/36e5;return h<1?"vừa xong":h<24?Math.round(h)+" giờ trước":Math.round(h/24)+" ngày trước"};
+
+$("#when").textContent=`Quét lúc ${dt(D.collected_at)}`+(D.prev_at?` · so với lần trước ${dt(D.prev_at)}`:" · lần quét đầu tiên (chưa có so sánh)");
+const st=Object.entries(D.status).filter(([k])=>!/reddit/i.test(k)).map(([k,v])=>[k,v]);
+if(D.social_at) st.push(["tiktok/facebook",`quét ${dt(D.social_at)}`]);
+const okS=st.filter(([k,v])=>/^ok|quét/.test(v)),badS=st.filter(([k,v])=>!/^ok|quét/.test(v));
+$("#status").innerHTML=`<span class="chip ok" title="${esc(okS.map(([k,v])=>k+": "+v).join("\n"))}">${okS.length} nguồn hoạt động</span>`+badS.map(([k,v])=>`<span class="chip off" title="${esc(v)}">${esc(k.replace("_"," "))}: ${esc(v)}</span>`).join("");
+
+const hotNiche=D.niches[0]||{};
+const topGT=D.gtrends[0]||{};
+const newest=D.terms.find(t=>t.is_new)||D.terms[0]||{};
+$("#kpis").innerHTML=[
+ ["Tín hiệu thu được",D.n_signals.toLocaleString("vi-VN"),"tin, bài, xu hướng tìm kiếm"],
+ ["Ngách nóng nhất",hotNiche.niche||"–",hotNiche.momentum?`đà tăng ${hotNiche.momentum}`:""],
+ ["Top Google Trends",topGT.title||"–",topGT.score?fmt(topGT.score)+"+ lượt tìm":""],
+ [D.prev_at?"Cụm từ mới nổi":"Cụm từ nhắc nhiều nhất",newest.term||"–",newest.count?newest.count+" tin":""]
+].map(([l,v,n])=>`<div class="kpi"><div class="l">${l}</div><div class="v">${esc(v)}</div><div class="n">${esc(n)}</div></div>`).join("");
+
+function bars(el,rows,max){max=max||Math.max(...rows.map(r=>r.v),1);el.innerHTML=rows.map(r=>`<div class="row"><div class="lab" title="${esc(r.l)}">${esc(r.l)}${r.badge||""}</div><div class="trk"><div class="fill" style="width:${(r.v/max*100).toFixed(1)}%"></div></div><div class="num">${r.n??fmt(r.v)}</div></div>`).join("")}
+bars($("#terms"),D.terms.slice(0,25).map(t=>({l:t.term,v:t.count,badge:t.is_new?'<span class="new">MỚI</span>':(t.delta>0?`<span class="up">▲${t.delta}</span>`:"")})));
+bars($("#cats"),D.cats.map(([c,n])=>({l:c,v:n})));
+const DM=(D.domains||{}).meta||{};const dlab=d=>DM[d]?DM[d].icon+" "+DM[d].label:"Khác";
+$("#gtrends").innerHTML=D.gtrends.map(g=>`<li><b>${esc(g.title)}</b> <span class="tag">${esc(dlab(g.domain))}</span> <span class="meta">· ${fmt(g.score)}+ lượt tìm · ${ago(g.published)}</span>${(g.news||[]).slice(0,2).map(n=>`<a class="hl" href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)} — ${esc(n.source)}</a>`).join("")}</li>`).join("")||"<li class='meta'>Không có dữ liệu</li>";
+
+function momStyle(m){const a=Math.max(0,Math.min(1,(m-80)/100));return `background:rgba(216,67,43,${(a*.85).toFixed(2)});color:${a>.5?"#fff":"inherit"}`}
+$("#nicheBody").innerHTML=D.niches.map(n=>`<tr><td><b>${esc(n.niche)}</b></td><td><span class="mom" style="${momStyle(n.momentum)}">${n.momentum}</span></td><td class="num">${n.articles}${n.articles>=100?"+":""}<div class="meta">${n.recent48} trong 48h</div></td><td class="num">${n.fb?fmt(n.fb.active_ads)+(n.fb.capped?"+":""):"–"}</td><td>${n.terms.map(t=>`<span class="tag">${esc(t)}</span>`).join("")}${n.headlines.map(h=>`<a class="hl" href="${esc(h.url)}" target="_blank" rel="noopener">${esc(h.title)} — ${esc(h.outlet||"")}</a>`).join("")}</td></tr>`).join("");
+
+$("#buzz").innerHTML=D.buzz.map(b=>`<details class="topic"><summary><span><b>${esc(b.term)}</b> <span class="tag">${esc(b.category)}</span></span><span class="meta">${b.count} tin</span></summary>${b.examples.map(e=>`<a class="hl" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)} — ${esc(e.outlet||"")}</a>`).join("")}</details>`).join("");
+
+$("#socialNote").innerHTML=(D.social_at?`<b>TikTok & Facebook quét lần cuối ${dt(D.social_at)}</b> (TikTok đã đăng nhập: top 100 hashtag + top 30 theo ngành).`:"Chưa có dữ liệu TikTok/Facebook.")+((D.social_notes||[]).length?`<ul style="margin:6px 0 0 18px;padding:0">${D.social_notes.map(n=>`<li style="margin:3px 0">${esc(n)}</li>`).join("")}</ul>`:"");
+const TTV={"Apparel & Accessories":"Thời trang & phụ kiện","Beauty & Personal Care":"Làm đẹp & chăm sóc","Baby, Kids & Maternity":"Mẹ & bé","Household Products":"Đồ gia dụng","Home Improvement":"Nhà cửa & nội thất","Tech & Electronics":"Công nghệ & điện tử","Pets":"Thú cưng","Food & Beverage":"Đồ ăn & thức uống","Sports & Outdoor":"Thể thao & ngoài trời","Games":"Game","Health":"Sức khoẻ"};
+const ttSel=$("#ttInd");ttSel.innerHTML=`<option value="">Tất cả ngành (top 100)</option>`+Object.keys(D.tiktok_ind||{}).map(k=>`<option value="${esc(k)}">${esc(TTV[k]||k)} (${D.tiktok_ind[k].length})</option>`).join("");
+const ttRender=()=>{const k=ttSel.value;const rows=k?D.tiktok_ind[k]:D.tiktok;
+$("#ttBody").innerHTML=rows.map(t=>`<tr><td>${t.rank}</td><td><a href="https://www.tiktok.com/tag/${esc(t.hashtag)}" target="_blank" rel="noopener">#${esc(t.hashtag)}</a>${t.industry?` <span class="tag">${esc(t.industry)}</span>`:""}</td><td class="num">${fmt(t.posts)}</td><td class="num">${fmt(t.views)}</td></tr>`).join("")||"<tr><td colspan=4 class='meta'>Chưa có dữ liệu</td></tr>";};
+ttSel.onchange=ttRender;ttRender();
+const fbRows=(D.fb_all||[]).map(f=>({niche:f.keyword,fb:f}));
+bars($("#fbBars"),fbRows.map(n=>({l:n.niche,v:n.fb.active_ads,n:fmt(n.fb.active_ads)+(n.fb.capped?"+":"")})));
+$("#fbAdv").innerHTML=fbRows.filter(n=>!n.fb.capped&&(n.fb.top_advertisers||[]).length).map(n=>`<div style="margin:6px 0"><b>${esc(n.niche)}:</b> ${n.fb.top_advertisers.slice(0,5).map(a=>`<span class="tag">${esc(a)}</span>`).join("")}</div>`).join("");
+
+const cats=[...new Set(D.feed.map(f=>f.category))].sort();
+$("#fCat").innerHTML+=cats.map(c=>`<option>${esc(c)}</option>`).join("");
+function renderFeed(){const q=$("#q").value.toLowerCase(),s=$("#fSrc").value,p=$("#fPlat").value,c=$("#fCat").value;
+ const r=D.feed.filter(f=>(!q||f.title.toLowerCase().includes(q))&&(!s||f.source===s)&&(!p||f.platform_hint===p)&&(!c||f.category===c));
+ $("#feedCount").textContent=`${r.length} tín hiệu`;
+ $("#feedList").innerHTML=r.slice(0,200).map(f=>`<li><a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(f.title)}</a><div class="meta">${f.source==="reddit"?"r/"+esc(f.subreddit):esc(f.outlet||"")} · ${ago(f.published)} · <span class="tag">${esc(f.category)}</span>${f.query?` · từ khoá: ${esc(f.query)}`:""}</div></li>`).join("")}
+["#q","#fSrc","#fPlat","#fCat"].forEach(s=>$(s).addEventListener("input",renderFeed));renderFeed();
+
+function showTab(t){document.querySelectorAll("#tabs button").forEach(x=>x.classList.toggle("on",x.dataset.t===t));document.querySelectorAll("section").forEach(s=>s.classList.toggle("hide",s.id!==t));window.scrollTo(0,0)}
+document.querySelectorAll("#tabs button").forEach(b=>b.onclick=()=>showTab(b.dataset.t));
+
+// ---- theo lĩnh vực ----
+const DD=D.domains||{order:[],data:{}};
+const sigs=r=>{const s=[];if(r.wiki){const w=r.wiki;s.push(`<span class="sig w" title="${esc(w.desc||"")}">📖 ${fmt(w.views)} lượt xem${w.is_new?' <b>MỚI</b>':(w.change?` ▲${w.change}x`:"")}</span>`)}
+ (r.charts||[]).forEach(c=>s.push(`<span class="sig c">📊 #${c.rank} ${esc(c.chart)}</span>`));if(r.mentions)s.push(`<span class="sig n">📰 ${r.mentions} tin</span>`);if(r.social)s.push(`<span class="sig s">💬 ${r.social} bài MXH · ${fmt(r.social_eng)} tương tác</span>`);return s.join("")};
+const postHtml=p=>`<div class="post">${p.source==="youtube"?"▶️":"💬"} <a href="${esc(p.url)}" target="_blank" rel="noopener">${esc((p.title||"").slice(0,220))}</a><div class="meta">${p.source==="youtube"?`YouTube · ${esc(p.author||"")} · ${fmt(p.views)} lượt xem · ${esc(p.ago||"")}`:`Bluesky · @${esc(p.author||"")} · ❤ ${fmt(p.likes)} · 🔁 ${fmt(p.reposts)} · 💬 ${fmt(p.replies)}`}</div></div>`;
+function renderSeason(v){
+ $("#dBody").innerHTML=v.holidays.map((b,i)=>`<tr><td>${i+1}</td><td><b>${esc(b.name)}</b><div class="meta">${esc(b.date)} · ${b.days_left>=0?"còn "+b.days_left+" ngày":"đã qua"}</div></td><td class="num">${b.n_news} tin<br>${b.n_social} bài MXH</td><td>${b.phrases.slice(0,10).map(([p,k])=>`<span class="tag">${esc(p)} · ${k}</span>`).join("")}</td><td>${b.news.slice(0,2).map(e=>`<a class="hl" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)} — ${esc(e.outlet||"")}</a>`).join("")}</td></tr>`).join("");
+ const cards=v.holidays.filter(b=>b.n_news||b.n_social).map(b=>`<div class="card"><h2>🎃 ${esc(b.name)} — ${b.days_left>=0?"còn "+b.days_left+" ngày":"đã qua"}</h2><p class="hint">Cụm từ người Mỹ đang nhắc nhiều quanh dịp này (tin tức + mạng xã hội).</p><div>${b.phrases.map(([p,k])=>`<span class="tag">${esc(p)} · ${k}</span>`).join("")}</div><h2 style="margin-top:12px">💬 Mạng xã hội</h2>${b.social.slice(0,6).map(postHtml).join("")||"<p class=meta>Chưa có</p>"}<h2 style="margin-top:12px">📰 Tin</h2><ul class="list">${b.news.slice(0,5).map(n=>`<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div class="meta">${esc(n.outlet||"")} · ${ago(n.published)}</div></li>`).join("")}</ul></div>`);
+ if(v.wiki.length)cards.push(`<div class="card"><h2>📖 Wikipedia</h2><ol class="mini">${v.wiki.map((w,i)=>`<li><span class="rk">${i+1}</span><span><a href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.title)}</a> <span class="meta">· ${fmt(w.views)}${w.change?` · ▲${w.change}x`:""}</span><div class="dtag">${esc(w.desc||"")}</div></span></li>`).join("")}</ol></div>`);
+ $("#dCharts").innerHTML=cards.join("")}
+function renderDomain(d){const v=DD.data[d];if(!v)return;const m=DM[d];
+ document.querySelectorAll("#dchips button").forEach(b=>b.classList.toggle("on",b.dataset.d===d));
+ $("#dTitle").textContent=`${m.icon} ${m.label} — trend đang lên ở Mỹ`;
+ if(d==="season"){renderSeason(v);try{localStorage.setItem("ts_dom",d)}catch(e){};return}
+ $("#dBody").innerHTML=v.top.map((r,i)=>`<tr><td>${i+1}</td><td><a href="${esc(r.url||"#")}" target="_blank" rel="noopener"><b>${esc(r.name)}</b></a>${r.is_new_top?' <span class="new">MỚI</span>':""}${r.sub?`<div class="meta">${esc(r.sub)}</div>`:(r.wiki&&r.wiki.desc?`<div class="meta">${esc(r.wiki.desc)}</div>`:"")}</td><td class="num">${r.score}<div class="scorebar"><i style="width:${Math.min(100,r.score)}%"></i></div></td><td>${sigs(r)}</td><td>${(r.examples||[]).slice(0,2).map(e=>`<a class="hl" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.title)} — ${esc(e.outlet||"")}</a>`).join("")}</td></tr>`).join("")||"<tr><td colspan=5 class='meta'>Chưa có dữ liệu</td></tr>";
+ const cards=Object.entries(v.charts).map(([name,rows])=>`<div class="card"><h2>📊 ${esc(name)}</h2><ol class="mini">${rows.slice(0,12).map(r=>`<li><span class="rk">${r.rank}</span><span><a href="${esc(r.url||"#")}" target="_blank" rel="noopener">${esc(r.title)}</a>${r.sub?` <span class="meta">· ${esc(r.sub)}</span>`:""}</span></li>`).join("")}</ol></div>`);
+ if(v.wiki.length)cards.push(`<div class="card"><h2>📖 Wikipedia — được tra cứu nhiều nhất</h2><p class="hint">Wikipedia tiếng Anh, ngày ${esc(DD.wiki_day||"")}</p><ol class="mini">${v.wiki.slice(0,12).map((w,i)=>`<li><span class="rk">${i+1}</span><span><a href="${esc(w.url)}" target="_blank" rel="noopener">${esc(w.title)}</a> <span class="meta">· ${fmt(w.views)}${w.is_new?' · <b>MỚI</b>':(w.change?` · ▲${w.change}x`:"")}</span><div class="dtag">${esc(w.desc||"")}</div></span></li>`).join("")}</ol></div>`);
+ if(v.social&&v.social.length)cards.unshift(`<div class="card"><h2>💬 Mạng xã hội đang bàn</h2><p class="hint">Bluesky & YouTube, xếp theo tương tác.</p>${v.social.slice(0,10).map(postHtml).join("")}</div>`);
+ if(v.news.length)cards.push(`<div class="card"><h2>📰 Tin mới nhất (${v.n_news})</h2><ul class="list">${v.news.slice(0,12).map(n=>`<li><a href="${esc(n.url)}" target="_blank" rel="noopener">${esc(n.title)}</a><div class="meta">${esc(n.outlet||"")} · ${ago(n.published)}</div></li>`).join("")}</ul></div>`);
+ $("#dCharts").innerHTML=cards.join("");
+ try{localStorage.setItem("ts_dom",d)}catch(e){}}
+$("#dchips").innerHTML=DD.order.filter(d=>DD.data[d]).map(d=>`<button data-d="${d}">${DM[d].icon} ${esc(DM[d].label)}</button>`).join("");
+document.querySelectorAll("#dchips button").forEach(b=>b.onclick=()=>renderDomain(b.dataset.d));
+$("#domCards").innerHTML=DD.order.filter(d=>DD.data[d]&&DD.data[d].top.length).map(d=>`<div class="dcard" data-d="${d}"><h3>${DM[d].icon} ${esc(DM[d].label)} <span>xem thêm →</span></h3><ol>${DD.data[d].top.slice(0,5).map(r=>`<li title="${esc(r.name)}">${esc(r.name)}${r.is_new_top?' <span class="new">MỚI</span>':""}</li>`).join("")}</ol></div>`).join("");
+document.querySelectorAll(".dcard").forEach(c=>c.onclick=()=>{showTab("domains");renderDomain(c.dataset.d)});
+// ---- mạng xã hội ----
+$("#bskyTrend").innerHTML=(DD.bsky_trending||[]).map(t=>`<li><a href="${esc(t.url)}" target="_blank" rel="noopener"><b>${esc(t.title)}</b></a> <span class="tag">${esc(dlab(t.domain))}</span>${t.desc?`<div class="meta">${esc(t.desc)}</div>`:""}</li>`).join("")||"<li class=meta>Chưa có dữ liệu</li>";
+const allSoc=[];DD.order.forEach(d=>{const v=DD.data[d];if(!v)return;(v.social||[]).forEach(p=>allSoc.push({...p,domain:d}));(v.holidays||[]).forEach(b=>b.social.forEach(p=>allSoc.push({...p,domain:d})))});
+$("#socDom").innerHTML+=DD.order.filter(d=>DD.data[d]).map(d=>`<option value="${d}">${esc(dlab(d))}</option>`).join("");
+function renderSoc(){const d=$("#socDom").value,s=$("#socSrc").value;const seen=new Set();
+ const r=allSoc.filter(p=>(!d||p.domain===d)&&(!s||p.source===s)&&!seen.has(p.url)&&seen.add(p.url)).sort((a,b)=>(b.source==="youtube"?b.views/1000:b.engagement)-(a.source==="youtube"?a.views/1000:a.engagement));
+ $("#socList").innerHTML=r.slice(0,40).map(p=>postHtml(p).replace('<div class="meta">',`<div class="meta"><span class="tag">${esc(dlab(p.domain))}</span> `)).join("")||"<p class=meta>Chưa có dữ liệu</p>"}
+["#socDom","#socSrc"].forEach(x=>$(x).addEventListener("input",renderSoc));renderSoc();
+
+// ---- gợi ý sản phẩm ----
+const IDS=D.ideas||{};const RS=IDS.research;
+const slinks=q=>{const e=encodeURIComponent(q);return `<span class="slinks"><a href="https://www.amazon.com/s?k=${e}" target="_blank" rel="noopener">Amazon</a><a href="https://www.etsy.com/search?q=${e}" target="_blank" rel="noopener">Etsy</a><a href="https://www.walmart.com/search?q=${e}" target="_blank" rel="noopener">Walmart</a><a href="https://www.aliexpress.com/w/wholesale-${encodeURIComponent(q.replace(/ /g,"-"))}.html" target="_blank" rel="noopener">AliExpress</a></span>`};
+if(RS){$("#resTitle").textContent=`Gợi ý đã research (${RS.ideas.length} ý tưởng · ${RS.date})`;$("#resNote").textContent=RS.note||"";
+ const cats=[...new Set(RS.ideas.map(i=>i.category))];$("#resCat").innerHTML+=cats.map(c=>`<option>${esc(c)}</option>`).join("");
+ const renderRes=()=>{const c=$("#resCat").value;$("#resList").innerHTML=RS.ideas.filter(i=>!c||i.category===c).map((i,n)=>`<div class="idea"><h3>${n+1}. ${esc(i.title)}</h3><div><span class="pill">${esc(i.category)}</span><span class="pill t">⏱ ${esc(i.timing)}</span><span class="pill">IP: ${esc(i.ip_risk)}</span></div>
+  <p style="margin:10px 0 4px"><b>Tín hiệu trend:</b> ${esc(i.trend)}</p><p style="margin:4px 0"><b>Gợi ý cho RnD:</b> ${esc(i.suggest)}</p>
+  <div class="row2"><div><b>Sản phẩm tham khảo trên thị trường</b><ul>${(i.products||[]).map(p=>`<li><a href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.name)}</a> <span class="meta">· ${esc(p.retailer)}${p.price?" · "+esc(p.price):""}</span></li>`).join("")||"<li class=meta>Dùng link tìm kiếm bên phải</li>"}</ul>
+  <div style="margin-top:8px">${(i.search||[]).map(q=>`<div class="meta">🔎 ${esc(q)}: ${slinks(q)}</div>`).join("")}</div></div>
+  <div><b>Nguồn / bằng chứng</b><ul>${(i.evidence||[]).map(e=>`<li><a href="${esc(e.url)}" target="_blank" rel="noopener">${esc(e.label)}</a></li>`).join("")||"<li class=meta>Từ tín hiệu TrendScout</li>"}</ul></div></div></div>`).join("")};
+ $("#resCat").addEventListener("input",renderRes);renderRes()}
+$("#autoBody").innerHTML=(IDS.auto||[]).slice(0,40).map(i=>`<tr><td><b>${esc(i.trend)}</b><div class="meta">${esc(dlab(i.domain))}</div></td><td>${esc(i.angle)}<div class="meta">🔎 ${esc(i.query)}</div></td><td class="meta">${esc(i.why)}</td><td>${slinks(i.query)}</td></tr>`).join("")||"<tr><td colspan=4 class=meta>Chưa có</td></tr>";
+
+let d0=DD.order.find(d=>DD.data[d]);try{const s=localStorage.getItem("ts_dom");if(s&&DD.data[s])d0=s}catch(e){}
+if(d0)renderDomain(d0);
+
+// ---- lịch sử / biểu đồ xu hướng ----
+const HIST=D.history||{dates:[],niches:{},holidays:{}};
+const histSel=$("#histSel");
+const histOpts=[...Object.keys(HIST.niches).map(k=>({v:"n:"+k,l:k})),...Object.keys(HIST.holidays).map(k=>({v:"h:"+k,l:"🎃 "+k}))];
+histSel.innerHTML=histOpts.map(o=>`<option value="${esc(o.v)}">${esc(o.l)}</option>`).join("")||"<option value=''>Chưa có dữ liệu</option>";
+function drawLineChart(dates,values,label){
+ const pts=values.map((v,i)=>({x:i,y:v})).filter(p=>p.y!=null);
+ if(pts.length<2)return `<p class="meta">Chưa đủ dữ liệu lịch sử cho "${esc(label)}" (cần chạy tool nhiều ngày để có đường xu hướng). Hiện có ${pts.length} điểm.</p>`;
+ const w=900,h=260,pad=38,n=dates.length;
+ const ys=pts.map(p=>p.y);const maxY=Math.max(...ys),minY=Math.min(...ys,0);
+ const xs=i=>pad+(w-2*pad)*(n<=1?0:i/(n-1));
+ const ymap=y=>h-pad-(h-2*pad)*((y-minY)/((maxY-minY)||1));
+ const line=pts.map(p=>`${xs(p.x).toFixed(1)},${ymap(p.y).toFixed(1)}`).join(" ");
+ const dots=pts.map(p=>`<circle cx="${xs(p.x).toFixed(1)}" cy="${ymap(p.y).toFixed(1)}" r="3.5" fill="#d8432b"><title>${esc(dates[p.x])}: ${p.y}</title></circle>`).join("");
+ const step=Math.max(1,Math.ceil(n/7));
+ const xlab=dates.map((d,i)=>(i%step===0||i===n-1)?`<text x="${xs(i).toFixed(1)}" y="${h-8}" font-size="10" fill="#6b6a65" text-anchor="middle">${esc(d.slice(5))}</text>`:"").join("");
+ const last=pts[pts.length-1].y,first=pts[0].y,diff=last-first;
+ const trend=diff>0?`<span class="up">▲ +${diff}</span>`:diff<0?`<span style="color:var(--accent)">▼ ${diff}</span>`:`<span class="meta">không đổi</span>`;
+ return `<p class="meta">${esc(label)}: ${first} → ${last} ${trend} (so với điểm đầu trong giai đoạn đang xem)</p><svg viewBox="0 0 ${w} ${h}" style="width:100%;height:260px"><line x1="${pad}" y1="${h-pad}" x2="${w-pad}" y2="${h-pad}" stroke="var(--line)"/><polyline points="${line}" fill="none" stroke="var(--bar)" stroke-width="2"/>${dots}${xlab}</svg>`;
+}
+function renderHistory(){
+ const v=histSel.value;if(!v)return;
+ const type=v.slice(0,1),name=v.slice(2);
+ const series=(type==="n"?HIST.niches:HIST.holidays)[name]||[];
+ $("#histChart").innerHTML=drawLineChart(HIST.dates,series,name);
+ try{localStorage.setItem("ts_hist",v)}catch(e){}
+}
+histSel.onchange=renderHistory;
+try{const s=localStorage.getItem("ts_hist");if(s&&histOpts.some(o=>o.v===s))histSel.value=s}catch(e){}
+if(histOpts.length)renderHistory();
+</script>
+</body>
+</html>

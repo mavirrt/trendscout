@@ -1,0 +1,11 @@
+{
+ "collected_at": "2026-10-28T07:40:00+00:00",
+ "method": "Claude quét Meta Ad Library qua trình duyệt tích hợp (từ khoá mùa lễ)",
+ "facebook_ads": [
+  {"keyword": "halloween costume", "active_ads": 25000, "capped": false, "top_advertisers": ["HalloweenCostumes.com", "Walmart", "Twix", "Reese's", "KitKat", "Chewy"]},
+  {"keyword": "thanksgiving decor", "active_ads": 1100, "capped": false, "top_advertisers": ["SHEIN HOME", "Temu Home", "Wander Prints Home Decor", "Bob's Discount Furniture", "Callie Gifts"]},
+  {"keyword": "christmas gift", "active_ads": 50000, "capped": true, "top_advertisers": ["SHEIN HOME", "Temu", "Aspen & Arlo", "Worthy Always", "Febworld", "Alibaba.com"]}
+ ],
+ "tiktok_hashtags": [],
+ "notes": ["Quảng cáo 'christmas gift' đã chạm trần 50K ngay từ cuối tháng 10 → đối thủ đã bắt đầu đẩy hàng Giáng sinh; 'thanksgiving decor' mới ~1.1K → còn ít cạnh tranh."]
+}
